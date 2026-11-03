@@ -8,19 +8,35 @@ Este guia tanto quanto os outros estão aqui para serem construídos de forma co
 
 A OLT Fiberhome utiliza-se de diretórios para para dividir áreas 
 
-## ONU
+## Acesso usuário comum
 
-### show onu_state slot [N_SLOT] pon [N_PON] onu [N_ONU] 
+### ENABLE
+-   Esse comando garante privilégios de administrador para o usuário, é necessário ter acesso as credenciais do administrador, pode ser abreviado com _EN_
+
+## Acesso administrador
+
+### ONU
+
+#### show onu_state slot {N_SLOT} pon {N_PON} onu {N_ONU} 
 
 -   Esse comando apresenta a lista de onus da pon especificada apresentando o número de identificação registrado para a ONU e o atual status.
 
-### show mac_list slot [N_SLOT] pon [N_PON] onu [N_ONU] port [N_PORTA_ONU]
+#### show mac_list slot {N_SLOT} pon {N_PON} onu {N_ONU} port {N_PORTA_ONU}
 
 -   Esse comando apresenta a lista de MACs enxergados na porta lan especificada da ONU especificada.
 
-### show onu_aaa_config slot [N_SLOT] pon [N_PON] onu [N_ONU]
+#### show onu_aaa_config slot {N_SLOT} pon {N_PON} onu {N_ONU}
 
 -   Esse comando apresenta a configuração de AAA(Authentication, Authorization e Accounting) da ONU especificada.
 
+#### show authorization slot {N_SLOT} pon {N_PON}
+
+-   Esse comando apresenta a lsita de ONU autorizadas na PON específica apresentando, informando o número da ONU, tipo da ONU, ID físico e outros
+
+### MAINTENANCE
+   ### ALARM
+    #### show alarm current obj 1/{N_SLOT}/{N_PON}/{N_ONU}
+
+-   Esse comando apresenta os alarmes ativos na ONU especificada
 
 
