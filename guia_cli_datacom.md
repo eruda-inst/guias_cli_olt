@@ -1,11 +1,20 @@
 # Guia de comandos DATACOM
 
+#### {control + L}
+- Limpa o terminal
+
 ### Modo Exec
 - Esse modo é o modo inicial de acesso a OLT, é sempre o primeiro nível ao fazer login. Permite apenas comandos de leitura.
 
 #### {COMANDO} | include {ARG}
 
 - Alguns comandos permite a inclusão do include após o pipe "|", o include funciona como um filtro para especificar uma parte do que deve ser impresso
+
+#### reboot
+- Reinicia a OLT de forma segura
+
+#### reboot-forced
+- Força o reinício da OLT sem fazer nenhuma checagem
 
 #### show runing-config {ARG}
 - O comando permite você veja qual é a configuração que está rodando atualmente, o campo de {ARG} pode ser alterado para um elemento específico, apresentando apenas a configuração atual daquele elemento. Também pode ser enviado o campo vazio, assim a OLT responde todas as configurações
@@ -34,6 +43,12 @@
 #### show alarm
 - Apresenta os alarmes atuais na OLT
 - Permite uso do _include_ para filtrar ONU específica ou outro elemento
+
+#### show vlan brief
+- Apresenta todas as vlans configuradas na OLT com seu respectivo nome, tipo e contagem de interfaces vinculadas
+
+#### show vlan membership
+- Apresenta todas as vlans configuradas com mais detalhes, apresentando todas as interfaces vinculadas a vlan, statos da vlan na interface e estado da porta
 
 ### Modo Config
 - Esse é o modo privilegiado, aqui o usuário ganha acesso de adminitrador e pode escrever na OLT
