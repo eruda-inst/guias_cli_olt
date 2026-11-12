@@ -39,4 +39,16 @@ A OLT Fiberhome utiliza-se de diretórios para para dividir áreas
 
 -   Esse comando apresenta os alarmes ativos na ONU especificada
 
+### SERVICE
+
+#### telnet slot {N_SLOT}
+
+- Esse comando permite o usuário se conectar especificamente a um slot da OLT
+
+### PON
+> Esse comando funciona apenas quando conectado via TELNET a um slot
+#### show optical_status olt ponno {N_PON}
+
+- Esse comando informa status operacionais da pon como sinal do tranceiver e sinal das ONUs nessa pon.
+
 
