@@ -14,6 +14,27 @@ A OLT Fiberhome utiliza-se de diretórios para para dividir áreas
 -   Esse comando garante privilégios de administrador para o usuário, é necessário ter acesso as credenciais do administrador, pode ser abreviado com _EN_
 
 ## Acesso administrador
+### ADMIN
+
+#### showcard
+
+-   Esse comando apresenta o estado atual de todos os slots 
+
+#### show cpu {N_FRAME/N_SLOT}
+
+-   Apresenta o uso da cpu da placa escolhida, se nenhuma placa for escolhida é impresso o uso de todas as placas
+
+#### show cpu-mim {N_FRAME/N_SLOT}
+
+-   Apresenta o usdo da cpu e memória da placa escolhida, se nenhuma placa for escolida é impresso o uso de todas as placas
+
+#### show mac-address {FILTRO}
+
+-   Apresena os mac-address aprendido pela OLT, é possível filtrar placa, vlan e porta, é possível também apresentar apenas a contagem de vlans encontradas
+
+#### show running-config slot {N_SLOT} pon {N_PON} onu {N_ONU}
+
+-   Esse comando apresenta a configuração atual de uma ONU específica
 
 ### ONU
 
@@ -32,6 +53,18 @@ A OLT Fiberhome utiliza-se de diretórios para para dividir áreas
 #### show authorization slot {N_SLOT} pon {N_PON}
 
 -   Esse comando apresenta a lsita de ONU autorizadas na PON específica apresentando, informando o número da ONU, tipo da ONU, ID físico e outros
+
+#### show online slot {N_SLOT} pon {N_PON}
+
+-   Esse comando apresenta as onu online de uma PON específica informando o id, tipo e principalmente serial
+
+#### show onu optical-info slot {N_SLOT} pon {N_PON} onu all
+
+-   Esse comando apresenta uma lista com o status e outras métricas de todas as ONU em uma PON específica, as variáveis podem ser substituídas por ALL para ver todas as ONUs
+
+#### show mac-list slot {N_SLOT} pon {N_PON} onu {N_ONU} port {N_PORTA_ETHERNET}
+
+-   Esse comando apresenta os MACs enxergados atrás da ONU especificada
 
 ### MAINTENANCE
    ### ALARM
